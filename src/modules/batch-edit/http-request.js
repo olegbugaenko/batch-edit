@@ -39,11 +39,6 @@ class HttpRequest
             this.started = true;
             this.result = null;
             this.numRetries++;
-            console.log('----',{
-                method: this._verb,
-                url: this._url,
-                data: this._body
-            });
             try {
                 const result = await axios({
                     method: this._verb,
@@ -56,7 +51,6 @@ class HttpRequest
                     data: result.data,
                 }
             } catch(e) {
-                console.log(e.response.status);
                 if(this.numRetries >= this.maxRetries)
                 {
                     this.result = {
