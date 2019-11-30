@@ -9,15 +9,21 @@
     "express": "^4.17.1",
     "module-alias": "^2.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js"
   },
   "_moduleAliases": {
-    "@root"      : ".",
-    "@modules"      : "src/modules",
-    "@routes" : "src/routes"
+    "@root": ".",
+    "@modules": "src/modules",
+    "@routes": "src/routes"
   },
   "author": "",
   "license": "ISC"
